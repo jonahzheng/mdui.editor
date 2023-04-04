@@ -1,7 +1,7 @@
 import 'mdui.jq/es/methods/is';
 import 'mdui.jq/es/methods/text';
 import MenuAbstract from '../abstracts/menuAbstract';
-import $ from 'mdui.jq';
+import $ from 'mdui.jq/es/$';
 
 /**
  * 标题

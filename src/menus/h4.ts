@@ -7,7 +7,7 @@ import { replaceHtmlSymbol } from '../utils/str';
  * 标题
  */
 class H4 extends MenuAbstract {
-  static icon = 'title';
+  static icon = 'looks_4';
   static title = 'H4样式';
   static disable = ['bold', 'italic', 'image'];
   private active = false;

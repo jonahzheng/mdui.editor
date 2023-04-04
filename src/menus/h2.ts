@@ -7,7 +7,7 @@ import { replaceHtmlSymbol } from '../utils/str';
  * 标题
  */
 class H2 extends MenuAbstract {
-  static icon = 'title';
+  static icon = 'looks_two';
   static title = 'H2样式';
   static disable = ['bold', 'italic', 'image'];
   private active = false;
