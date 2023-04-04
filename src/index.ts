@@ -34,6 +34,16 @@ type MENUS =
   | 'image'
   | 'audio'
   | 'clear_drafts'
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'align_left'
+  | 'align_center'
+  | 'align_right'
+  | 'align_clear'
   | ' '
   | '|';
 
@@ -46,7 +56,12 @@ type TAGS_WHITELIST =
   | 'b'
   | 'em'
   | 'i'
+  | 'h1'
   | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
   | 'pre'
   | 'code'
   | 'ol'
@@ -55,6 +70,7 @@ type TAGS_WHITELIST =
   | 'a'
   | 'img'
   | 'audio'
+  | 'source'
   | 'figure'
   | 'figcaption';
 
@@ -146,13 +162,25 @@ const DEFAULT_OPTIONS: OPTIONS = {
   menus: [
     'bold',
     'italic',
-    'head',
+    //'head',
     'code',
     'ol',
     'ul',
     'link',
     'image',
     'audio',
+    '|',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    '|',
+    'align_left',
+    'align_center',
+    'align_right',
+    'align_clear',
     ' ',
     'clear_drafts',
   ],
@@ -162,7 +190,12 @@ const DEFAULT_OPTIONS: OPTIONS = {
     'b',
     'em',
     'i',
+    'h1',
     'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
     'pre',
     'code',
     'ol',
@@ -171,6 +204,7 @@ const DEFAULT_OPTIONS: OPTIONS = {
     'a',
     'img',
     'audio',
+    'source',
     'figure',
     'figcaption',
   ],
@@ -236,6 +270,8 @@ class Editor {
     extend(this.options, options);
 
     this.$toolbar = $(toolbar).first().addClass('mdui_editor-toolbar');
+    //让编辑器菜单可滚动
+    this.$toolbar = $(toolbar).first().css('overflow', 'auto');
 
     this.$container = $(container)
       .first()

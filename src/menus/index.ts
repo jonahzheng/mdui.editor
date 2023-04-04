@@ -21,6 +21,16 @@ import Link from './link';
 import Ol from './ol';
 import Ul from './ul';
 import Audio from './audio';
+import H1 from './h1';
+import H2 from './h2';
+import H3 from './h3';
+import H4 from './h4';
+import H5 from './h5';
+import H6 from './h6';
+import AlignLeft from './align_left';
+import AlignCenter from './align_center';
+import AlignRight from './align_right';
+import AlignClear from './align_clear';
 
 const MenuConstructors: PlainObject = {
   bold: Bold,
@@ -33,6 +43,16 @@ const MenuConstructors: PlainObject = {
   ol: Ol,
   ul: Ul,
   audio: Audio,
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  h5: H5,
+  h6: H6,
+  align_left: AlignLeft,
+  align_center: AlignCenter,
+  align_right: AlignRight,
+  align_clear: AlignClear,
 };
 
 class Menus extends CommonAbstract {

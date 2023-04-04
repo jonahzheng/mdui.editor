@@ -12,7 +12,7 @@ import MenuAbstract from '../abstracts/menuAbstract';
  * 添加链接
  */
 class Audio extends MenuAbstract {
-  static icon = 'audio';
+  static icon = 'headset';
   static title = '插入音频';
   // static disable = ['image'];
 
@@ -41,9 +41,10 @@ class Audio extends MenuAbstract {
         )[0] as HTMLInputElement;
 
         if (input.validity && input.validity.valid) {
-          const $rootElem = this.selection.getRootElem();
-          const rootHTML = $rootElem.html().toLowerCase().trim();
-          const imgHTML = `<figure><audio controls><source src="${url}" type="audio/ogg"><source src="horse.mp3" type="audio/mpeg">您的浏览器不支持 audio 元素。</audio><figcaption placeholder="音频描述（选填）"></figcaption></figure>`;
+          const $rootElem = this.selection.getRootElem(); 
+          const rootHTML = $rootElem.html().toLowerCase().trim(); 
+          const imgHTML = `<audio id="audio" controls="" preload="none"><source id="mp3" src="${url}"></audio>`;
+
           if (
             $rootElem[0].nodeName === 'P' &&
             (rootHTML === '<br>' || rootHTML === '<br/>')
@@ -57,8 +58,6 @@ class Audio extends MenuAbstract {
   
           // 在图片下面重新插入一行，并聚焦
           this.command.do('insertAfterRoot', '<p><br></p>');
-
-          this.command.do('createLink', url);
           dialog.close();
           return;
         }
