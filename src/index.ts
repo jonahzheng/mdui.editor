@@ -32,6 +32,7 @@ type MENUS =
   | 'ul'
   | 'link'
   | 'image'
+  | 'audio'
   | 'clear_drafts'
   | ' '
   | '|';
@@ -53,6 +54,7 @@ type TAGS_WHITELIST =
   | 'li'
   | 'a'
   | 'img'
+  | 'audio'
   | 'figure'
   | 'figcaption';
 
@@ -150,6 +152,7 @@ const DEFAULT_OPTIONS: OPTIONS = {
     'ul',
     'link',
     'image',
+    'audio',
     ' ',
     'clear_drafts',
   ],
@@ -167,6 +170,7 @@ const DEFAULT_OPTIONS: OPTIONS = {
     'li',
     'a',
     'img',
+    'audio',
     'figure',
     'figcaption',
   ],

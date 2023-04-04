@@ -20,6 +20,7 @@ import Italic from './italic';
 import Link from './link';
 import Ol from './ol';
 import Ul from './ul';
+import Audio from './audio';
 
 const MenuConstructors: PlainObject = {
   bold: Bold,
@@ -31,6 +32,7 @@ const MenuConstructors: PlainObject = {
   link: Link,
   ol: Ol,
   ul: Ul,
+  audio: Audio,
 };
 
 class Menus extends CommonAbstract {
